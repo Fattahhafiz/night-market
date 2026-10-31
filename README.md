@@ -48,3 +48,11 @@ composer test
 ## License
 
 MIT
+
+## Team
+
+| Name | Role |
+|------|------|
+| Fattah | |
+| Syarif | |
+| Kimi | |
