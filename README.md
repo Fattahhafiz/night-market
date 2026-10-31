@@ -55,4 +55,4 @@ MIT
 |------|------|
 | Fattah | |
 | Syarif | |
-| Kimi | |
+| Kimi |Repository & Documentation Management|
