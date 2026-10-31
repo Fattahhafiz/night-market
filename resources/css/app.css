@@ -4,6 +4,69 @@
 @source '../../storage/framework/views/*.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+
+    --color-night-950: #0a0813;
+    --color-night-900: #131022;
+    --color-night-800: #1c1733;
+    --color-night-700: #2a2347;
+    --color-night-600: #3b3160;
+
+    --color-ember-300: #fcd34d;
+    --color-ember-400: #fbbf24;
+    --color-ember-500: #f59e0b;
+    --color-ember-600: #ea580c;
+    --color-ember-700: #c2410c;
+
+    --color-cream-50: #fdfaf3;
+    --color-cream-100: #f7efe0;
+    --color-cream-200: #efe3cc;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+::selection {
+    background: var(--color-ember-400);
+    color: var(--color-night-950);
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float 7s ease-in-out 1.2s infinite;
+}
+
+.string-lights {
+    background-image:
+        radial-gradient(circle at 8px 6px, #fbbf24 0 3px, transparent 4px),
+        radial-gradient(circle at 32px 6px, #f472b6 0 3px, transparent 4px),
+        radial-gradient(circle at 56px 6px, #34d399 0 3px, transparent 4px),
+        radial-gradient(circle at 80px 6px, #60a5fa 0 3px, transparent 4px),
+        radial-gradient(circle at 104px 6px, #fbbf24 0 3px, transparent 4px),
+        linear-gradient(to bottom, transparent 0, rgba(255, 255, 255, 0.25) 11px, rgba(255, 255, 255, 0.25) 12px, transparent 13px);
+    background-size: 128px 14px, 128px 14px, 128px 14px, 128px 14px, 128px 14px, 100% 14px;
+    background-repeat: repeat-x;
 }
