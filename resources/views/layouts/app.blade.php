@@ -119,7 +119,7 @@
             </div>
 
             <div class="mt-10 flex flex-col items-center justify-between gap-2 border-t border-white/10 pt-6 text-sm text-cream-100/50 sm:flex-row">
-                <p>© {{ date('Y') }} {{ config('app.name', 'Night Market') }}. All rights reserved.</p>
+                <p>Group 3 IIB</p>
                 <p>Follow your nose. See you tonight.</p>
             </div>
         </div>
