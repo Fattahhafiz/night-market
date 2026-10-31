@@ -123,65 +123,16 @@
         </div>
 
         <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            @foreach ($products as $product)
             <article class="group rounded-2xl border border-night-900/10 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
                 <div class="flex items-start justify-between">
-                    <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-ember-400/25 to-ember-600/25 text-3xl transition duration-300 group-hover:scale-110" aria-hidden="true">🍢</span>
-                    <span class="rounded-full bg-cream-100 px-3 py-1 text-sm font-semibold text-ember-700">$2.80</span>
+                    <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-ember-400/25 to-ember-600/25 text-3xl transition duration-300 group-hover:scale-110" aria-hidden="true">???</span>
+                    <span class="rounded-full bg-cream-100 px-3 py-1 text-sm font-semibold text-ember-700">${{ $product->price }}</span>
                 </div>
-                <h3 class="mt-5 text-lg font-semibold text-night-900">Chicken Satay</h3>
-                <p class="mt-2 text-sm leading-relaxed text-night-700/75">Char-grilled skewers with creamy peanut sauce and cucumber slices.</p>
-                <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-night-700/50">Stall A12 · Sate House</p>
+                <h3 class="mt-5 text-lg font-semibold text-night-900">{{ $product->name }}</h3>
+                <p class="mt-2 text-sm leading-relaxed text-night-700/75">{{ $product->description }}</p>
             </article>
-
-            <article class="group rounded-2xl border border-night-900/10 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div class="flex items-start justify-between">
-                    <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-ember-400/25 to-ember-600/25 text-3xl transition duration-300 group-hover:scale-110" aria-hidden="true">🍜</span>
-                    <span class="rounded-full bg-cream-100 px-3 py-1 text-sm font-semibold text-ember-700">$4.00</span>
-                </div>
-                <h3 class="mt-5 text-lg font-semibold text-night-900">Bakso Noodle</h3>
-                <p class="mt-2 text-sm leading-relaxed text-night-700/75">Springy beef meatballs in a rich, slow-simmered broth with greens.</p>
-                <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-night-700/50">Stall B04 · Wok Master</p>
-            </article>
-
-            <article class="group rounded-2xl border border-night-900/10 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div class="flex items-start justify-between">
-                    <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-ember-400/25 to-ember-600/25 text-3xl transition duration-300 group-hover:scale-110" aria-hidden="true">🐙</span>
-                    <span class="rounded-full bg-cream-100 px-3 py-1 text-sm font-semibold text-ember-700">$5.00</span>
-                </div>
-                <h3 class="mt-5 text-lg font-semibold text-night-900">Takoyaki</h3>
-                <p class="mt-2 text-sm leading-relaxed text-night-700/75">Crispy octopus balls topped with mayo, sauce and bonito flakes.</p>
-                <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-night-700/50">Stall C07 · Smoke &amp; Fire</p>
-            </article>
-
-            <article class="group rounded-2xl border border-night-900/10 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div class="flex items-start justify-between">
-                    <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-ember-400/25 to-ember-600/25 text-3xl transition duration-300 group-hover:scale-110" aria-hidden="true">🧋</span>
-                    <span class="rounded-full bg-cream-100 px-3 py-1 text-sm font-semibold text-ember-700">$2.80</span>
-                </div>
-                <h3 class="mt-5 text-lg font-semibold text-night-900">Brown Sugar Boba</h3>
-                <p class="mt-2 text-sm leading-relaxed text-night-700/75">Ice-cold milk tea with chewy brown sugar pearls. Sweetness on request.</p>
-                <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-night-700/50">Stall D02 · Sweet Corner</p>
-            </article>
-
-            <article class="group rounded-2xl border border-night-900/10 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div class="flex items-start justify-between">
-                    <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-ember-400/25 to-ember-600/25 text-3xl transition duration-300 group-hover:scale-110" aria-hidden="true">🥟</span>
-                    <span class="rounded-full bg-cream-100 px-3 py-1 text-sm font-semibold text-ember-700">$4.50</span>
-                </div>
-                <h3 class="mt-5 text-lg font-semibold text-night-900">Pan-Fried Dumplings</h3>
-                <p class="mt-2 text-sm leading-relaxed text-night-700/75">Golden pork dumplings with a crispy, savoury base and chilli oil.</p>
-                <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-night-700/50">Stall A08 · Dumpling Den</p>
-            </article>
-
-            <article class="group rounded-2xl border border-night-900/10 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div class="flex items-start justify-between">
-                    <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-ember-400/25 to-ember-600/25 text-3xl transition duration-300 group-hover:scale-110" aria-hidden="true">🥭</span>
-                    <span class="rounded-full bg-cream-100 px-3 py-1 text-sm font-semibold text-ember-700">$3.20</span>
-                </div>
-                <h3 class="mt-5 text-lg font-semibold text-night-900">Mango Sticky Rice</h3>
-                <p class="mt-2 text-sm leading-relaxed text-night-700/75">Sweet coconut sticky rice with ripe mango slices, served warm.</p>
-                <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-night-700/50">Stall E11 · Sweet Corner</p>
-            </article>
+            @endforeach
         </div>
     </div>
 </section>
